@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				spiritual: {
+					purple: '#9b87f5',
+					'deep-purple': '#7E69AB',
+					lavender: '#E5DEFF',
+					blue: '#D3E4FD',
+					gray: '#8E9196',
+					dark: '#1A1F2C'
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +93,48 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'pulse-gentle': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.9',
+						transform: 'scale(1.05)'
+					}
+				},
+				'breathe': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						opacity: '0.8'
+					},
+					'50%': {
+						transform: 'scale(1.5)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'pulse-gentle': 'pulse-gentle 4s ease-in-out infinite',
+				'breathe': 'breathe 4s ease-in-out infinite'
+			},
+			fontFamily: {
+				'sans': ['Nunito', 'ui-sans-serif', 'system-ui'],
+				'serif': ['Playfair Display', 'ui-serif', 'Georgia']
 			}
 		}
 	},
